@@ -3,7 +3,7 @@
 ;; (2)標準化されたカテゴリの数字を合計する
 
 (defun calculate-normalized-score (score voter)
-  (let ((normalized-score(* (/ score voter) 10)))
+  (let ((normalized-score(* (/ (float score) voter) 100)))
     (format t "normalized-score: ~a~%" normalized-score)
   normalized-score)
 )
