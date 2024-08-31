@@ -20,8 +20,16 @@
     total-score)
 )
 
-(defun calculate-performance-score (performance-score performance-voter))
-(defun calculate-visual-score (visual-score visual-voter))
-(defun calculate-total-score (total-score))
-
-(calculate-hackathon-score 2 10 3 10 8 16)
+;; 引数定義
+(let (
+      (technical-score 2) ;; 技術スコア
+      (technical-score-voter 10) ;; 技術スコアの投票者数
+      (performance-score 2) ;; パフォーマンススコア
+      (performance-score-voter 10) ;; パフォーマンススコアの投票者数
+      (visual-score 2) ;;  完成度スコア
+      (visual-score-voter 16) ;; 完成度スコアの投票者数
+    )
+    (calculate-hackathon-score technical-score technical-score-voter 
+                              performance-score performance-score-voter
+                              visual-score visual-score-voter)
+)
